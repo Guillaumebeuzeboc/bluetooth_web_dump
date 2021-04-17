@@ -28,7 +28,6 @@ function connect() {
 	document.getElementById("B_STATUS").innerHTML += "Connected\n";
 	return device.watchAdvertisements();
     })
-    .then()
      .catch(error => {
         console.log(error);
 	document.getElementById("B_STATUS").innerHTML += "Error\n";
