@@ -1,6 +1,7 @@
 <html>
 <body>
 <button onclick="connect();">Click here</button>
+<p id="B_STATUS"> Bluetoth not connected </p>
 <script>
 function connect() {
     console.log('Getting Bluetooth Device...');
@@ -10,9 +11,11 @@ function connect() {
     })
     .then(device => {
         console.log('Got device');
+	document.getElementById("B_STATUS").innerHTML = "Connected";
     })
      .catch(error => {
         console.log(error);
+	document.getElementById("B_STATUS").innerHTML = "Error";
     });
  }
 </script>
