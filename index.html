@@ -43,9 +43,9 @@ const logDataView = (labelOfDataSource, key, valueDataView) => {
   }).join(' ');
   const textDecoder = new TextDecoder('ascii');
   const asciiString = textDecoder.decode(valueDataView.buffer);
-  log(`  ${labelOfDataSource} Data: ` + key +
+  document.getElementById("B_STATUS").innerHTML +=`  ${labelOfDataSource} Data: ` + key +
       '\n    (Hex) ' + hexString +
-      '\n    (ASCII) ' + asciiString);
+      '\n    (ASCII) ' + asciiString;
 };
 </script>
 </body>
