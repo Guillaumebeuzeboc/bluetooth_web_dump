@@ -30,7 +30,7 @@ function connect() {
     })
      .catch(error => {
         console.log(error);
-	document.getElementById("B_STATUS").innerHTML += "Error\n";
+	    document.getElementById("B_STATUS").innerHTML += "Error" + error +"\n";
     });
  }
 
