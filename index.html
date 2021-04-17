@@ -12,6 +12,7 @@ function connect() {
     .then(device => {
         console.log('Got device');
 	document.getElementById("B_STATUS").innerHTML = "Connected";
+	return device.gatt.connect();
     })
      .catch(error => {
         console.log(error);
